@@ -1,0 +1,50 @@
+ion-back-button {
+  display: block !important;
+}
+
+ion-title {
+  display: none;
+}
+
+ion-content {
+  --ion-background-color: #f6f4f4; 
+}
+
+ion-content ion-card ion-card-header ion-card-title,
+ion-content ion-card ion-card-header ion-card-subtitle {
+  font-size: 1.5rem; 
+  color: #d69fa5; 
+  text-align: center; 
+  margin: 5px 0; 
+}
+
+ion-content ion-card {
+  margin: 10px;
+  border-radius: 10px;
+
+  ion-card-header img.imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+
+  ion-card-header ion-card-subtitle::before {
+    content: "$"; 
+  }
+
+  ion-button {
+    --background: linear-gradient(#f9eeee, #f0dddd); 
+    color: #d69fa5; 
+    margin-top: 10px;
+    margin: 15px;
+    text-align: center; 
+
+    &:hover {
+      --background: linear-gradient(#f0dddd, #e0cccc); 
+    }
+  }
+}
+
+ion-content ion-card:first-child {
+  margin-top: 0px; 
+}

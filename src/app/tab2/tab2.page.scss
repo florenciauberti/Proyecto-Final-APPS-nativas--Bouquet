@@ -1,0 +1,72 @@
+* {
+  font-size: large;
+    font-weight: lighter;
+  }
+  
+  ion-title {
+    color: rgb(156, 84, 84);
+    font-weight: 700;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: center;
+    align-self: center;
+    max-width: 400px; 
+    margin: 0 auto; 
+    background: linear-gradient(#ffffff, #ffffff); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    outline: none; 
+  }
+  
+  form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #d69fa5; 
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #d69fa5; 
+    border-radius: 5px;
+  }
+  
+  .margen-chico {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#fbf8f5, #fdfbf9); 
+  }
+  
+  .boton {
+    display: inline-block;
+    width: 75%;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(#d69fa5, #b38187); 
+    color: #ffffff; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boton:hover {
+    background: linear-gradient(#b38187, #9d6672); 
+  }
+  
+  

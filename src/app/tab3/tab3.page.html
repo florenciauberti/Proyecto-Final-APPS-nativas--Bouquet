@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Carrito
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="resumen-title">Resumen de tu pedido</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let item of cartService.carrito">
+          <ion-thumbnail slot="start">
+            <img alt="{{item.producto.nombre}}" src="{{item.producto.imagen}}"/>
+          </ion-thumbnail>
+          <ion-label>{{item.producto.nombre}}{{item.cantidad}}</ion-label>
+          <ion-button [fill]="'clear'" (click)="cartService.eliminarProducto(item.producto.nombre)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-content color="light">
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-label>Total: ${{cartService.totalCarrito}}</ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-button fill="outline" color="dark" shape="round" expand="block" (click)="realizarPedido()">Realizar pedido</ion-button>
+    <ion-button fill="outline" color="dark" shape="round" expand="block" (click)="cartService.vaciarCarrito()">Vaciar carrito</ion-button>
+
+    <section class="disclaimer-section">
+      <p class="disclaimer-text">
+         *Si esta es tu primera compra, por favor completa el formulario que figura en la solapa contigua*
+      </p>
+    </section>
+</ion-content>
+
