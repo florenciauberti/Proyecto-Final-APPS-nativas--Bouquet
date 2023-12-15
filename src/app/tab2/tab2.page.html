@@ -8,24 +8,24 @@
 
 
   <form #formulario= "ngForm" class="margen-chico" (ngSubmit)="guardarDatosPerfil()">
-    <div>
+     <div>
     <label for= "nombre"> Nombre </label>
-    <input type= "text" name= "nombre" id= "nombre" [(ngModel)]="perfil.nombre" #nombre="ngModel" minlength="3">
+    <input type= "text" name= "nombre" id= "nombre" [(ngModel)]="perfil.nombre" #nombre="ngModel" minlength="3"[ngClass]="{'error': nombre.invalid && nombre.touched}">
     <p class="error" *ngIf="nombre.invalid">Ingrese un nombre valido, porfavor</p>
   </div>
     <div>
     <label for= "mail"> Mail </label>
-    <input type= "text" name= "mail" id= "mail" [(ngModel)]="perfil.mail" #mail="ngModel" minlength="3">
+    <input type= "text" name= "mail" id= "mail" [(ngModel)]="perfil.mail" #mail="ngModel" minlength="3"[ngClass]="{'error': mail.invalid && mail.touched}">
     <p class="error" *ngIf="mail.invalid">Ingrese un mail valido, porfavor</p>
   </div>
     <div>
     <label for= "telefono"> Teléfono </label>
-    <input type= "text" name= "telefono" id= "telefono" [(ngModel)]="perfil.telefono" #telefono="ngModel" minlength="7">
+    <input type= "text" name= "telefono" id= "telefono" [(ngModel)]="perfil.telefono" #telefono="ngModel" minlength="7"[ngClass]="{'error': telefono.invalid && telefono.touched}">
     <p class="error" *ngIf="telefono.invalid">Ingrese un telefono valido, porfavor</p>
   </div>
     <div>
     <label for= "dirección"> Dirección </label>
-    <input type= "text" name= "dirección" id= "dirección" [(ngModel)]="perfil.direccion" #direccion="ngModel" minlength="5">
+    <input type= "text" name= "dirección" id= "dirección" [(ngModel)]="perfil.direccion" #direccion="ngModel" minlength="5"[ngClass]="{'error': direccion.invalid && direccion.touched}">
     <p class="error" *ngIf="direccion.invalid">Ingrese una direccion valida, porfavor</p>
   </div>
     <button class="boton">Enviar</button>
